@@ -1,3 +1,4 @@
+using CleanArch.Infra.Data.Context;
 using CleanArchitecture.Mvc.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +34,11 @@ namespace CleanArchitecture.Mvc
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddDbContext<PapaIgorPizzaDBContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("PapaIgorPizzaDBConnection"));
+            });
             services.AddRazorPages();
         }
 
