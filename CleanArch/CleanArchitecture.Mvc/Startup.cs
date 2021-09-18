@@ -1,4 +1,5 @@
 using CleanArch.Infra.Data.Context;
+using CleanArch.Infra.IoC;
 using CleanArchitecture.Mvc.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -40,6 +41,8 @@ namespace CleanArchitecture.Mvc
                 options.UseSqlServer(Configuration.GetConnectionString("PapaIgorPizzaDBConnection"));
             });
             services.AddRazorPages();
+
+            registerServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,6 +72,11 @@ namespace CleanArchitecture.Mvc
             {
                 endpoints.MapRazorPages();
             });
+        }
+
+        private static void registerServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }
