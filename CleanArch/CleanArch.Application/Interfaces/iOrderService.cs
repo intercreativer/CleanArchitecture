@@ -9,6 +9,6 @@ namespace CleanArch.Application.Interfaces
 {
     public interface iOrderService
     {
-        IEnumerable<OrderViewModel> GetOrders();
+        OrderViewModel GetOrders();
     }
 }
