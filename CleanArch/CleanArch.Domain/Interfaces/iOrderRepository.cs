@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Domain.Interfaces
 {
-    public interface iOrderRepository
+    public interface IOrderRepository
     {
-        IEnumerable<PizzaOrder> GetPizzaOrders();
+        IEnumerable<Order> GetOrders();
     }
 }

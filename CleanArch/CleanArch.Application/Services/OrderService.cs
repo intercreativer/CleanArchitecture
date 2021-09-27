@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Application.Services
 {
-    public class OrderService : iOrderService
+    public class OrderService : IOrderService
     {
-        private iOrderRepository _orderRepository;
+        private IOrderRepository _orderRepository;
 
-        public OrderService(iOrderRepository orderRepository)
+        public OrderService(IOrderRepository orderRepository)
         {
             _orderRepository = orderRepository;
         }
@@ -21,8 +21,9 @@ namespace CleanArch.Application.Services
         {
             return new OrderViewModel()
             {
-                PizzaOrders = _orderRepository.GetPizzaOrders()
+                Orders = _orderRepository.GetOrders()
             };
         }
+
     }
 }

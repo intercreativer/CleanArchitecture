@@ -13,6 +13,6 @@ namespace CleanArch.Infra.Data.Context
         public PapaIgorPizzaDBContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<PizzaOrder> Orders { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }

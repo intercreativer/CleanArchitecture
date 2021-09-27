@@ -19,7 +19,7 @@ namespace CleanArch.Infra.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CleanArch.Domain.Models.PizzaOrder", b =>
+            modelBuilder.Entity("CleanArch.Domain.Models.Order", b =>
                 {
                     b.Property<Guid>("OrderId")
                         .ValueGeneratedOnAdd()

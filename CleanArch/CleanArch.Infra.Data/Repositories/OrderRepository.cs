@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Infra.Data.Repositories
 {
-    public class OrderRepository : iOrderRepository
+    public class OrderRepository : IOrderRepository
     {
         private PapaIgorPizzaDBContext _ctx;
 
@@ -17,7 +17,7 @@ namespace CleanArch.Infra.Data.Repositories
         {
             _ctx = ctx;
         }
-        public IEnumerable<PizzaOrder> GetPizzaOrders()
+        public IEnumerable<Order> GetOrders()
         {
             return _ctx.Orders;
         }

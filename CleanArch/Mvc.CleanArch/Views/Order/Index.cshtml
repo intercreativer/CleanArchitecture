@@ -1,0 +1,12 @@
+﻿@model CleanArch.Application.ViewModels.OrderViewModel
+
+<div class="container body-content">
+    <div class="row order-content">
+        @foreach (var order in Model.Orders)
+        {
+            <p class="order-description-container">
+                <span>@order.OrderId</span>
+            </p>
+        }
+    </div>
+</div>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Domain.Models
 {
-    public class PizzaOrder
+    public class Order
     {
         [Key]
         public Guid OrderId { get; set; }
