@@ -17,6 +17,13 @@ namespace CleanArch.Infra.Data.Repositories
         {
             _ctx = ctx;
         }
+
+        public void Add(Order order)
+        {
+            _ctx.Orders.Add(order);
+            _ctx.SaveChanges();
+        }
+
         public IEnumerable<Order> GetOrders()
         {
             return _ctx.Orders;

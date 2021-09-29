@@ -10,5 +10,6 @@ namespace CleanArch.Domain.Interfaces
     public interface IOrderRepository
     {
         IEnumerable<Order> GetOrders();
+        void Add(Order order);
     }
 }
