@@ -10,5 +10,7 @@ namespace CleanArch.Application.Interfaces
     public interface IOrderService
     {
         OrderViewModel GetOrders();
+
+        void Create(OrderViewModel orderViewModel);
     }
 }

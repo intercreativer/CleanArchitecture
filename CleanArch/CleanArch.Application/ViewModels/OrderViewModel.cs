@@ -9,6 +9,9 @@ namespace CleanArch.Application.ViewModels
 {
     public class OrderViewModel
     {
+        public int Size { get; set; }
+        public int Crust { get; set; }
+        public string Toppings { get; set; }
         public IEnumerable<Order> Orders { get; set; }
     }
 }
