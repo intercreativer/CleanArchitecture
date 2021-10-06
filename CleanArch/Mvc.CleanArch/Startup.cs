@@ -1,5 +1,6 @@
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -43,6 +44,7 @@ namespace Mvc.CleanArch
                 options.UseSqlServer(Configuration.GetConnectionString("PapaIgorPizzaDBConection"));
             });
 
+            services.AddMediatR(typeof(Startup));
             RegisterServices(services);
         }
 

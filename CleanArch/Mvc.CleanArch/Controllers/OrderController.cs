@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Mvc.CleanArch.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class OrderController : Controller
     {
         private IOrderService _orderService;
